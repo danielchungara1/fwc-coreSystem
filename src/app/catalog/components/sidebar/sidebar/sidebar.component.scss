@@ -1,0 +1,10 @@
+.sidebar-container {
+  width: 200px;
+  height:100%;
+}
+
+.sidebar-container ::ng-deep .p-tieredmenu {
+  height: 100%;
+  width: 100%;
+
+}

@@ -1,0 +1,24 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.dashboard-container ::ng-deep router-outlet {
+  position: absolute;
+}
+
+.row-container {
+  display: flex;
+  flex-direction: row;
+
+  /*Growing vertically*/
+  flex: 2;
+
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
