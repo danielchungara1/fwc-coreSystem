@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {LocalStorageService} from '@core/localStorage/local-storage.service';
-import {UserModel} from '../../models/UserModel';
 import {Router} from '@angular/router';
 import {NotificationService} from '@shared/notifications/notification.service';
 import {MenuItem} from 'primeng/api';
@@ -12,8 +11,6 @@ import {MenuItem} from 'primeng/api';
 })
 export class HeaderComponent implements OnInit {
 
-  user: UserModel;
-
   items: MenuItem[];
 
   constructor(private localStorageService: LocalStorageService,
@@ -22,7 +19,6 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.user = this.localStorageService.getUser();
 
     this.items = [
       {
@@ -45,11 +41,5 @@ export class HeaderComponent implements OnInit {
         label: 'SHOPPING CART'
       }
     ];
-  }
-
-  logout(): void {
-    this.localStorageService.clear();
-    this.router.navigate(['security/login']);
-    this.notificationService.showSuccess('User logged out.');
   }
 }

@@ -33,7 +33,7 @@ export class EndPoints {
   static CATEGORIES_CREATE = environment.API + '/categories/new-category';
 
   // Product Enpoints
-  static PRODUCTS = environment.API + '/products';
-  static PRODUCTS_GET_ALL = environment.API + '/products/all';
-  static PRODUCTS_CREATE = environment.API + '/products/new-product';
+  static PRODUCTS = environment.API + '/product';
+  static PRODUCTS_GET_ALL = environment.API + '/product/all';
+  static PRODUCTS_CREATE = environment.API + '/product/new-product';
 }
