@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {responsiveOptions} from './product.responsive';
 import {products} from './product.mock';
+import {ProductService} from './product.service';
+import {NotificationService} from '@shared/notifications/notification.service';
+import {ProductModel} from './product.model';
 
 @Component({
     selector: 'app-products',
@@ -10,14 +13,17 @@ import {products} from './product.mock';
 export class ProductComponent implements OnInit {
 
     responsiveOptions;
-    products;
+    products: ProductModel[];
 
-    constructor() {
-        this.responsiveOptions = responsiveOptions;
-        this.products = products;
+    constructor(public service: ProductService, public notificationService: NotificationService) {
     }
 
     ngOnInit(): void {
+        this.responsiveOptions = responsiveOptions;
+        this.service.getAll()
+            .subscribe(
+                data => this.products = data,
+                error => this.notificationService.showError(error));
     }
 
 }

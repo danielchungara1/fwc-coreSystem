@@ -1,11 +1,11 @@
-.dashboard-container {
+.layout-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
 }
 
-.dashboard-container ::ng-deep router-outlet {
+.layout-container ::ng-deep router-outlet {
   position: absolute;
 }
 
