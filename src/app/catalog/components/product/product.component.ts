@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {responsiveOptions} from './product.responsive';
-import {products} from './product.mock';
 import {ProductService} from './product.service';
 import {NotificationService} from '@shared/notifications/notification.service';
 import {ProductModel} from './product.model';
+import {ProductEndpoints} from './product.endpoints';
 
 @Component({
     selector: 'app-products',
@@ -14,6 +14,7 @@ export class ProductComponent implements OnInit {
 
     responsiveOptions;
     products: ProductModel[];
+    productEndpoints = new ProductEndpoints();
 
     constructor(public service: ProductService, public notificationService: NotificationService) {
     }
@@ -26,4 +27,7 @@ export class ProductComponent implements OnInit {
                 error => this.notificationService.showError(error));
     }
 
+    getURLMainImage(id: number): string {
+        return this.productEndpoints.BASE + `/${id}` + '/download-main-image';
+    }
 }
