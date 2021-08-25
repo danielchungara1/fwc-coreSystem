@@ -23,11 +23,8 @@ export class ProductComponent implements OnInit {
         this.responsiveOptions = responsiveOptions;
         this.service.getAll()
             .subscribe(
-                data => this.products = data,
+                data => { this.products = data; },
                 error => this.notificationService.showError(error));
     }
 
-    getURLMainImage(id: number): string {
-        return this.productEndpoints.BASE + `/${id}` + '/download-main-image';
-    }
 }

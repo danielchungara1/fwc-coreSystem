@@ -5,9 +5,6 @@ import {ProductModel} from './product.model';
 import {MapperService} from '@core/mapper/mapper.service';
 import {ProductEndpoints} from './product.endpoints';
 import {ProductDto} from './product.dto';
-import {Observable, throwError} from 'rxjs';
-import {catchError, map} from 'rxjs/operators';
-import {ResponseSimpleDto} from '@core/abstract/ResponseSimpleDto';
 
 
 @Injectable({

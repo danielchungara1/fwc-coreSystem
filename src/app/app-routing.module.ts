@@ -5,7 +5,7 @@ import {RouterModule, Routes} from '@angular/router';
 const routes: Routes = [
   {
     path: 'catalog',
-    loadChildren: () => import('./catalog/dashboard.module').then(module => module.DashboardModule)
+    loadChildren: () => import('./catalog/catalog.module').then(module => module.CatalogModule)
   }, // lazy load
   {
     path: '**',

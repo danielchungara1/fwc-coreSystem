@@ -9,7 +9,7 @@
         <div class="product-item">
             <div class="product-item-content">
                 <div>
-                    <img [src]="getURLMainImage(product.id)" alt="image" style="height: 250px">
+                    <img [src]="product.images | imageSrcPipe" alt="image" style="height: 250px">
                     <h2 class="p-mb-1">{{product.description}}</h2>
                     <h3 class="p-mt-0 p-mb-3">${{product.price}}</h3>
                     <h3 class="p-mt-0 p-mb-3">Stock {{product.stock}}</h3>
