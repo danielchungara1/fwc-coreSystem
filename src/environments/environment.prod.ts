@@ -7,7 +7,7 @@ export const environment = {
   production: true,
   NAME: name,
   VERSION: version,
-  API: 'http://www.coresystem-ws.tk/api/v2',
+  API: 'https://coresystem-ws.herokuapp.com/api/v2',
 };
 
 /*
