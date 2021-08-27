@@ -8,6 +8,7 @@ import {LayoutComponent} from './components/layout/layout.component';
 import { ImageSrcPipe } from './components/product/image/image-src-pipe';
 import { HomeComponent } from './components/home/home.component';
 import { ResultSearchComponent } from './components/product/result-search/result-search.component';
+import { CardComponent } from './components/product/card/card.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ResultSearchComponent } from './components/product/result-search/result
     LayoutComponent,
     ImageSrcPipe,
     HomeComponent,
-    ResultSearchComponent
+    ResultSearchComponent,
+    CardComponent
   ],
   imports: [
     CatalogRoutingModule,

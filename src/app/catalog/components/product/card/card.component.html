@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="card-top">
+        <div></div>
+        <span [ngClass]=" product.stock > 0
+                            ? 'stock in-stock'
+                            : 'stock out-stock'
+                            "
+        >
+                        {{product.stock > 0 ? 'EN STOCK' : 'SIN STOCK'}}
+                    </span>
+    </div>
+    <div class="card-content">
+        <img [src]="product.images | imageSrcPipe" alt="image" class="product-image">
+        <div class="product-description">{{product.description}}</div>
+    </div>
+    <div class="card-bottom">
+        <span class="product-price">${{product.price}}</span>
+        <p-button icon="pi pi-shopping-cart" [disabled]="product.stock === 0"></p-button>
+    </div>
+</div>

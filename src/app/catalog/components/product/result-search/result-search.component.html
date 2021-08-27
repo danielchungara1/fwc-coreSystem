@@ -1,9 +1,9 @@
-<h3 *ngIf="products?.length === 0">
-    No hay resultados que coincidan con tu búsqueda: {{searchText}}
-</h3>
+<p-dataView [value]="products" [paginator]="false" layout="grid">
+    <ng-template let-product pTemplate="gridItem">
+        <div class="p-col-12 p-md-3 ">
 
-<ul>
-    <li *ngFor="let p of products ">
-        {{p.description}}
-    </li>
-</ul>
+        <app-card-product [product]="product"></app-card-product>
+
+        </div>
+    </ng-template>
+</p-dataView>
