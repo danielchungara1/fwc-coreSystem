@@ -43,7 +43,7 @@ export abstract class CrudService<T> {
   }
 
   public getPage(searchText: string, pageNumber: number): Observable<Page<T>> {
-    return this.httpService.get<ResponseDto<Page<T>>>(this.crudEndpoints.BASE + `?text=${searchText}&page=${pageNumber}&size=${this.PAGE_SIZE}`)
+    return this.httpService.get<ResponseDto<Page<T>>>(this.crudEndpoints.BASE + '/page' + `?text=${searchText}&page=${pageNumber}&size=${this.PAGE_SIZE}`)
       .pipe(
         map((res: ResponseDto<Page<T>>) => {
             return res.data;
@@ -54,7 +54,7 @@ export abstract class CrudService<T> {
   }
 
   public searchAndEmit(text: string, pageNumber: number): void {
-    this.httpService.get<ResponseDto<Page<T>>>(this.crudEndpoints.BASE + `?text=${text}&page=${pageNumber}&size=${this.PAGE_SIZE}`)
+    this.httpService.get<ResponseDto<Page<T>>>(this.crudEndpoints.BASE + '/page' + `?text=${text}&page=${pageNumber}&size=${this.PAGE_SIZE}`)
       .subscribe((res: ResponseDto<Page<T>>) => {
               const resultSearch: ResultSearch<T> =
                 {

@@ -18,9 +18,7 @@ export class ResultSearchComponent implements OnInit {
     ngOnInit(): void {
         this.productService.$resultSearch.subscribe(
             (resultSearch: ResultSearch<ProductModel>) => {
-                // @ts-ignore
-                this.model = resultSearch.page;
-                console.log(this.model);
+                this.model = resultSearch.page.content;
             }
         );
     }
