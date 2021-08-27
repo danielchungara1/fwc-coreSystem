@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {LocalStorageService} from '@core/localStorage/local-storage.service';
+import {LocalStorageService} from '@core/services/localStorage/local-storage.service';
 import {Router} from '@angular/router';
-import {NotificationService} from '@shared/notifications/notification.service';
 import {MenuItem} from 'primeng/api';
+import {NotificationService} from '@shared/notification.service';
 
 @Component({
   selector: 'app-header',

@@ -2,11 +2,11 @@ import {Component, Input, OnInit} from '@angular/core';
 import {FormGroup} from '@angular/forms';
 
 @Component({
-  selector: 'app-button-submit',
-  templateUrl: './button-submit.component.html',
-  styleUrls: ['./button-submit.component.scss']
+  selector: 'app-btn-submit',
+  templateUrl: './btn-submit.component.html',
+  styleUrls: ['./btn-submit.component.scss']
 })
-export class ButtonSubmitComponent implements OnInit {
+export class BtnSubmitComponent implements OnInit {
 
   @Input()
   label: string;

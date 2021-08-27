@@ -1,15 +1,15 @@
 import {Component, EventEmitter, Inject, Input, OnInit, Output} from '@angular/core';
-import {NotificationService} from '@shared/notifications/notification.service';
 import {ConfirmationService} from 'primeng/api';
-import {CrudService} from '@core/crud/crud.service';
-import {BaseModel} from '@core/abstract/BaseModel';
+import {CrudService} from '@core/services/crud/crud.service';
+import {BaseModel} from '@core/interfaces/base-model';
+import {NotificationService} from '@shared/notification.service';
 
 @Component({
-  selector: 'app-delete',
-  templateUrl: './delete.component.html',
-  styleUrls: ['./delete.component.scss']
+  selector: 'app-btn-delete',
+  templateUrl: './btn-delete.component.html',
+  styleUrls: ['./btn-delete.component.scss']
 })
-export class DeleteComponent<T extends BaseModel> implements OnInit {
+export class BtnDeleteComponent<T extends BaseModel> implements OnInit {
 
   @Input()
   model: T;

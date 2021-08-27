@@ -16,8 +16,8 @@ import {TooltipModule} from 'primeng/tooltip';
 import {MultiSelectModule} from 'primeng/multiselect';
 import {ChartModule} from 'primeng/chart';
 import {ProgressBarModule} from 'primeng/progressbar';
-import {RippleModule} from "primeng/ripple";
-import {CarouselModule} from "primeng/carousel";
+import {RippleModule} from 'primeng/ripple';
+import {CarouselModule} from 'primeng/carousel';
 
 @NgModule({
   declarations: [],

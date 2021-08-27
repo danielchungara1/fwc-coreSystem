@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
-import {HttpService} from '@core/httpClient/http.service';
-import {CrudService} from '@core/crud/crud.service';
+import {HttpService} from '@core/services/httpClient/http.service';
+import {CrudService} from '@core/services/crud/crud.service';
 import {ProductModel} from './product.model';
-import {MapperService} from '@core/mapper/mapper.service';
+import {MapperService} from '@core/services/mapper/mapper.service';
 import {ProductEndpoints} from './product.endpoints';
 import {ProductDto} from './product.dto';
 

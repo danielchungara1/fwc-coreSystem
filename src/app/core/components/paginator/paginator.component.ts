@@ -1,15 +1,14 @@
 import {AfterViewChecked, Component, Input, OnInit} from '@angular/core';
 import {PageEvent} from '@angular/material/paginator';
-import {CrudService} from '@core/crud/crud.service';
-import {ResultSearch} from '@core/abstract/ResultSearch';
-
+import {CrudService} from '@core/services/crud/crud.service';
+import {ResultSearch} from '@core/interfaces/result-search';
 
 @Component({
   selector: 'app-paginator',
-  templateUrl: './paging.component.html',
-  styleUrls: ['./paging.component.scss']
+  templateUrl: './paginator.component.html',
+  styleUrls: ['./paginator.component.scss']
 })
-export class PagingComponent<T> implements OnInit, AfterViewChecked {
+export class PaginatorComponent<T> implements OnInit, AfterViewChecked {
 
   @Input()
   crudService: CrudService<T>;
