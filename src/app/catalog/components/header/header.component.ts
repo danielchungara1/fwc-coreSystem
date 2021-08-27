@@ -3,6 +3,7 @@ import {LocalStorageService} from '@core/services/localStorage/local-storage.ser
 import {Router} from '@angular/router';
 import {MenuItem} from 'primeng/api';
 import {NotificationService} from '@shared/notification.service';
+import {ProductService} from '../product/product.service';
 
 @Component({
   selector: 'app-header',
@@ -15,7 +16,8 @@ export class HeaderComponent implements OnInit {
 
   constructor(private localStorageService: LocalStorageService,
               private router: Router,
-              private notificationService: NotificationService) {
+              private notificationService: NotificationService,
+              public productService: ProductService) {
   }
 
   ngOnInit(): void {

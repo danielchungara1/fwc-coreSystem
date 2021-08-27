@@ -8,7 +8,7 @@
         />
     </a>
 
-    <app-search></app-search>
+    <app-search [crudService]="productService"></app-search>
 
     <p-tieredMenu #menu [model]="items" [popup]="true"></p-tieredMenu>
     <button
