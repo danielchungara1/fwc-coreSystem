@@ -1,0 +1,9 @@
+<p-dataView [value]="products" [paginator]="false" layout="grid">
+    <ng-template let-product pTemplate="gridItem">
+        <div class="p-col-12 p-md-3 ">
+
+        <app-card-product [product]="product"></app-card-product>
+
+        </div>
+    </ng-template>
+</p-dataView>

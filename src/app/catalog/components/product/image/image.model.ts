@@ -1,4 +1,4 @@
-import {BaseModel} from '@core/abstract/BaseModel';
+import {BaseModel} from '@core/interfaces/base-model';
 
 export interface ImageModel extends BaseModel{
   url: string;

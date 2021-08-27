@@ -1,13 +1,12 @@
-import {HttpService} from '@core/httpClient/http.service';
+import {HttpService} from '@core/services/httpClient/http.service';
 import {Observable, throwError} from 'rxjs';
 import {catchError, map} from 'rxjs/operators';
-import {ResponseSimpleDto} from '@core/abstract/ResponseSimpleDto';
-import {Page} from '@core/abstract/Page';
-import {ResponseDto} from '@core/abstract/ResponseDto';
 import {CrudEndpoints} from './crud-endpoints';
 import {EventEmitter} from '@angular/core';
-import {ResultSearch} from '@core/abstract/ResultSearch';
-
+import {ResultSearch} from '@core/interfaces/result-search';
+import {ResponseDto} from '@core/interfaces/response-dto';
+import {ResponseSimpleDto} from '@core/interfaces/response-simple-dto';
+import {Page} from '@core/interfaces/page';
 
 export abstract class CrudService<T> {
 
@@ -44,7 +43,7 @@ export abstract class CrudService<T> {
   }
 
   public getPage(searchText: string, pageNumber: number): Observable<Page<T>> {
-    return this.httpService.get<ResponseDto<Page<T>>>(this.crudEndpoints.BASE + `?text=${searchText}&page=${pageNumber}&size=${this.PAGE_SIZE}`)
+    return this.httpService.get<ResponseDto<Page<T>>>(this.crudEndpoints.BASE + '/page' + `?text=${searchText}&page=${pageNumber}&size=${this.PAGE_SIZE}`)
       .pipe(
         map((res: ResponseDto<Page<T>>) => {
             return res.data;
@@ -55,7 +54,7 @@ export abstract class CrudService<T> {
   }
 
   public searchAndEmit(text: string, pageNumber: number): void {
-    this.httpService.get<ResponseDto<Page<T>>>(this.crudEndpoints.BASE + `?text=${text}&page=${pageNumber}&size=${this.PAGE_SIZE}`)
+    this.httpService.get<ResponseDto<Page<T>>>(this.crudEndpoints.BASE + '/page' + `?text=${text}&page=${pageNumber}&size=${this.PAGE_SIZE}`)
       .subscribe((res: ResponseDto<Page<T>>) => {
               const resultSearch: ResultSearch<T> =
                 {

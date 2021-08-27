@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
@@ -16,33 +16,36 @@ import {TooltipModule} from 'primeng/tooltip';
 import {MultiSelectModule} from 'primeng/multiselect';
 import {ChartModule} from 'primeng/chart';
 import {ProgressBarModule} from 'primeng/progressbar';
-import {RippleModule} from "primeng/ripple";
-import {CarouselModule} from "primeng/carousel";
+import {RippleModule} from 'primeng/ripple';
+import {CarouselModule} from 'primeng/carousel';
+import {DataViewModule} from 'primeng/dataview';
 
 @NgModule({
-  declarations: [],
-  exports: [
-    CardModule,
-    ButtonModule,
-    InputTextModule,
-    PasswordModule,
-    MessagesModule,
-    MessageModule,
-    TableModule,
-    DropdownModule,
-    ConfirmDialogModule,
-    TieredMenuModule,
-    MenuModule,
-    TooltipModule,
-    MultiSelectModule,
-    ChartModule,
-    ProgressBarModule,
-    RippleModule,
-    CarouselModule
-  ],
-  providers: [
-    MessageService,
-    ConfirmationService
-  ]
+    declarations: [],
+    exports: [
+        CardModule,
+        ButtonModule,
+        InputTextModule,
+        PasswordModule,
+        MessagesModule,
+        MessageModule,
+        TableModule,
+        DropdownModule,
+        ConfirmDialogModule,
+        TieredMenuModule,
+        MenuModule,
+        TooltipModule,
+        MultiSelectModule,
+        ChartModule,
+        ProgressBarModule,
+        RippleModule,
+        CarouselModule,
+        DataViewModule
+    ],
+    providers: [
+        MessageService,
+        ConfirmationService
+    ]
 })
-export class PrimengModule { }
+export class PrimengModule {
+}

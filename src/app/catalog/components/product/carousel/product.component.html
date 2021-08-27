@@ -1,0 +1,12 @@
+<p-carousel
+        [value]="products"
+        [autoplayInterval]="6000"
+        [circular]="true"
+        [responsiveOptions]="responsiveOptions"
+>
+    <ng-template let-product pTemplate="item">
+
+        <app-card-product [product]="product"></app-card-product>
+
+    </ng-template>
+</p-carousel>

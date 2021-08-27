@@ -5,9 +5,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {DatePipe} from '@angular/common';
 import {CoreModule} from '@core/core.module';
-import {NotificationService} from '@shared/notifications/notification.service';
-
-
+import {NotificationService} from '@shared/notification.service';
 
 @NgModule({
   imports: [

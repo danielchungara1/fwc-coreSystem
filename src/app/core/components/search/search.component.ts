@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {AbstractControl, FormBuilder, FormGroup} from '@angular/forms';
 import {SearchModel} from '@core/components/search/SearchModel';
-import {CrudService} from '@core/crud/crud.service';
+import {CrudService} from '@core/services/crud/crud.service';
 
 @Component({
   selector: 'app-search',

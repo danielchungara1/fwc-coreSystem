@@ -1,4 +1,4 @@
-import {Page} from '@core/abstract/Page';
+import {Page} from '@core/interfaces/page';
 
 export interface ResultSearch<T> {
   page: Page<T>;

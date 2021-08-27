@@ -1,4 +1,4 @@
-import {CrudEndpoints} from '@core/crud/crud-endpoints';
+import {CrudEndpoints} from '@core/services/crud/crud-endpoints';
 import {environment} from '@env';
 
 export class ProductEndpoints implements CrudEndpoints {

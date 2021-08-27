@@ -36,4 +36,5 @@ export class EndPoints {
   static PRODUCTS = environment.API + '/product';
   static PRODUCTS_GET_ALL = environment.API + '/product/all';
   static PRODUCTS_CREATE = environment.API + '/product/new-product';
+
 }

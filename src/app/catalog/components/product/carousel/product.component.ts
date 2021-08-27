@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {responsiveOptions} from './product.responsive';
-import {ProductService} from './product.service';
-import {NotificationService} from '@shared/notifications/notification.service';
-import {ProductModel} from './product.model';
-import {ProductEndpoints} from './product.endpoints';
+import {ProductService} from '../product.service';
+import {NotificationService} from '@shared/notification.service';
+import {ProductModel} from '../product.model';
+import {ProductEndpoints} from '../product.endpoints';
 
 @Component({
     selector: 'app-products',
