@@ -1,5 +1,9 @@
+<h3 *ngIf="products?.length === 0">
+    No hay resultados que coincidan con tu búsqueda: {{searchText}}
+</h3>
+
 <ul>
-    <li *ngFor="let p of model ">
+    <li *ngFor="let p of products ">
         {{p.description}}
     </li>
 </ul>
