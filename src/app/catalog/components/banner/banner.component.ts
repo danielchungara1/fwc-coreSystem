@@ -9,7 +9,7 @@ export class BannerComponent implements OnInit {
 
     images = [
         { src: '/assets/banner/images/1.jpg' },
-        { src: '/assets/banner/images/2.png' },
+        // { src: '/assets/banner/images/2.png' },
         { src: '/assets/banner/images/3.png' },
         { src: '/assets/banner/images/4.jpg' },
         { src: '/assets/banner/images/5.jpg' }

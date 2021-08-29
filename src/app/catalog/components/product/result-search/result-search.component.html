@@ -1,4 +1,9 @@
-<p-dataView [value]="products" [paginator]="false" layout="grid">
+<p-dataView
+        *ngIf="products"
+        [value]="products"
+        [paginator]="false"
+        layout="grid"
+>
     <ng-template let-product pTemplate="gridItem">
         <div class="p-col-12 p-md-3 ">
 
@@ -7,3 +12,8 @@
         </div>
     </ng-template>
 </p-dataView>
+
+<app-progress-spinner
+        [show]="!products"
+>
+</app-progress-spinner>

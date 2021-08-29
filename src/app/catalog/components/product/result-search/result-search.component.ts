@@ -18,7 +18,6 @@ export class ResultSearchComponent implements OnInit {
                 private activatedRoute: ActivatedRoute
     ) {
 
-        // this.searchText = this.activatedRoute.snapshot.paramMap.get('search-text');
         this.searchText = this.activatedRoute.snapshot.queryParamMap.get('text');
         this.products = history.state.data;
 
