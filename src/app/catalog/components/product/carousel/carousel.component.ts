@@ -16,10 +16,10 @@ export class CarouselComponent implements OnInit {
     products: ProductModel[];
     productEndpoints = new ProductEndpoints();
 
-    findAll = () => this.service.getAll()
+    fetchProducts = () => this.service.getPage('', 0, 20)
         .subscribe(
             data => {
-                this.products = data;
+                this.products = data.content;
             },
             error => this.notificationService.showError(error))
 
@@ -29,7 +29,7 @@ export class CarouselComponent implements OnInit {
 
     ngOnInit(): void {
         this.responsiveOptions = responsiveOptions;
-        this.findAll();
+        this.fetchProducts();
     }
 
 }
