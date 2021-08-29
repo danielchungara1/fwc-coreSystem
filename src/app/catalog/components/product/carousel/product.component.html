@@ -1,5 +1,5 @@
-
 <p-carousel
+        *ngIf="products"
         [value]="products"
         [autoplayInterval]="6000"
         [circular]="true"
@@ -12,4 +12,7 @@
     </ng-template>
 </p-carousel>
 
-<app-progress-bar [show]="!products"></app-progress-bar>
+<app-progress-spinner
+        [show]="!products"
+>
+</app-progress-spinner>

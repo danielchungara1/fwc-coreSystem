@@ -17,6 +17,7 @@ import {BtnDeleteComponent} from '@core/components/btn-delete/btn-delete.compone
 import {BtnEditComponent} from './components/btn-edit/btn-edit.component';
 import {NotificationComponent} from '@core/components/notification/notification.component';
 import {ToastModule} from 'primeng/toast';
+import { ProgressSpinnerComponent } from './components/progress-spinner/progress-spinner.component';
 
 @NgModule({
     imports: [
@@ -51,7 +52,8 @@ import {ToastModule} from 'primeng/toast';
         PaginatorComponent,
         BtnDeleteComponent,
         BtnEditComponent,
-        NotificationComponent
+        NotificationComponent,
+        ProgressSpinnerComponent
     ],
     exports: [
         // Modules
@@ -70,7 +72,8 @@ import {ToastModule} from 'primeng/toast';
         SearchComponent,
         BtnDeleteComponent,
         BtnEditComponent,
-        NotificationComponent
+        NotificationComponent,
+        ProgressSpinnerComponent
     ]
 })
 export class CoreModule {

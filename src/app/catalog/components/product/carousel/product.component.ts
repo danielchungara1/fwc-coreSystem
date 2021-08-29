@@ -16,15 +16,20 @@ export class ProductComponent implements OnInit {
     products: ProductModel[];
     productEndpoints = new ProductEndpoints();
 
+    findAll = () => this.service.getAll()
+        .subscribe(
+            data => {
+                this.products = data;
+            },
+            error => this.notificationService.showError(error))
+
     constructor(public service: ProductService, public notificationService: NotificationService) {
+
     }
 
     ngOnInit(): void {
         this.responsiveOptions = responsiveOptions;
-        this.service.getAll()
-            .subscribe(
-                data => { this.products = data; },
-                error => this.notificationService.showError(error));
+        this.findAll();
     }
 
 }

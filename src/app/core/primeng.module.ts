@@ -19,6 +19,7 @@ import {ProgressBarModule} from 'primeng/progressbar';
 import {RippleModule} from 'primeng/ripple';
 import {CarouselModule} from 'primeng/carousel';
 import {DataViewModule} from 'primeng/dataview';
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
 
 @NgModule({
     declarations: [],
@@ -38,6 +39,7 @@ import {DataViewModule} from 'primeng/dataview';
         MultiSelectModule,
         ChartModule,
         ProgressBarModule,
+        ProgressSpinnerModule,
         RippleModule,
         CarouselModule,
         DataViewModule
