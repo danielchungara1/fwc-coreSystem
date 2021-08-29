@@ -7,7 +7,7 @@ import {ImageModel} from './image.model';
 export class ImageSrcPipe implements PipeTransform {
 
     transform(images: ImageModel[], ...args: unknown[]): string {
-        return images?.find(value => value.main)?.url;
+        return images?.find(value => value.main)?.url + '/thumbnail';
     }
 
 }
