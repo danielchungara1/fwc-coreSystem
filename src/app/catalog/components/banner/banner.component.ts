@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-    selector: 'app-carousel',
+    selector: 'app-banner',
     templateUrl: './banner.component.html',
     styleUrls: ['./banner.component.scss']
 })
