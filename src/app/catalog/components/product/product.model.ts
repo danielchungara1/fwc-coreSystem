@@ -1,4 +1,4 @@
-import {ImageModel} from './image/image.model';
+import {ImageModel} from './image.model';
 import {BaseModel} from '@core/interfaces/base-model';
 
 export interface ProductModel extends BaseModel{

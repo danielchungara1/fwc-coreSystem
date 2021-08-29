@@ -1,16 +1,16 @@
 import {Component, OnInit} from '@angular/core';
-import {responsiveOptions} from './product.responsive';
+import {responsiveOptions} from './carousel.responsive';
 import {ProductService} from '../product.service';
 import {NotificationService} from '@shared/notification.service';
 import {ProductModel} from '../product.model';
 import {ProductEndpoints} from '../product.endpoints';
 
 @Component({
-    selector: 'app-products',
-    templateUrl: './product.component.html',
-    styleUrls: ['./product.component.scss']
+    selector: 'app-carousel-products',
+    templateUrl: './carousel.component.html',
+    styleUrls: ['./carousel.component.scss']
 })
-export class ProductComponent implements OnInit {
+export class CarouselComponent implements OnInit {
 
     responsiveOptions;
     products: ProductModel[];
