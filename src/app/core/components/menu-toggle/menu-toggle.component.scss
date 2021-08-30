@@ -1,0 +1,10 @@
+@import "./src/styles/variables";
+
+:host ::ng-deep .p-button-icon {
+  font-size:1.5em;
+}
+
+:host ::ng-deep .header-icon {
+  font-size:0.9em;
+  color: $color-black;
+}
