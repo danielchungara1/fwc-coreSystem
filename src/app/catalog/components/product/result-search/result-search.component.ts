@@ -24,7 +24,6 @@ export class ResultSearchComponent implements OnInit {
     ) {
 
         this.searchText = this.activatedRoute.snapshot.queryParamMap.get('text');
-        this.products = history.state.data;
 
         if (!this.products) {
             this.productService.searchAndEmit(this.searchText, 0);
@@ -39,10 +38,10 @@ export class ResultSearchComponent implements OnInit {
                 this.searchText = resultSearch.searchText;
             }
         );
-        this.initializeItems();
+        this.initializeOrderByItems();
     }
 
-    initializeItems(): void {
+    initializeOrderByItems(): void {
         this.orderByItems = [
             {
                 label: OrderCriteria.LOWEST_PRICE,
