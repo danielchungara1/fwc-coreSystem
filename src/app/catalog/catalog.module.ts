@@ -9,6 +9,7 @@ import { ImageSrcPipe } from './components/product/image-src-pipe';
 import { HomeComponent } from './components/home/home.component';
 import { ResultSearchComponent } from './components/product/result-search/result-search.component';
 import { CardComponent } from './components/product/card/card.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CardComponent } from './components/product/card/card.component';
     ImageSrcPipe,
     HomeComponent,
     ResultSearchComponent,
-    CardComponent
+    CardComponent,
+    LoginComponent
   ],
   imports: [
     CatalogRoutingModule,

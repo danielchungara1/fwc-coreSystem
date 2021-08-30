@@ -21,3 +21,11 @@
   margin: 0 10px;
   width: 150px;
 }
+
+:host ::ng-deep .p-submenu-list {
+  left: -30px !important;
+}
+
+:host ::ng-deep .pi-angle-right:before {
+  content: "\e931";
+}

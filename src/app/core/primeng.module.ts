@@ -20,6 +20,7 @@ import {RippleModule} from 'primeng/ripple';
 import {CarouselModule} from 'primeng/carousel';
 import {DataViewModule} from 'primeng/dataview';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
+import {DialogService, DynamicDialogModule} from 'primeng/dynamicdialog';
 
 @NgModule({
     declarations: [],
@@ -42,11 +43,13 @@ import {ProgressSpinnerModule} from 'primeng/progressspinner';
         ProgressSpinnerModule,
         RippleModule,
         CarouselModule,
-        DataViewModule
+        DataViewModule,
+        DynamicDialogModule
     ],
     providers: [
         MessageService,
-        ConfirmationService
+        ConfirmationService,
+        DialogService
     ]
 })
 export class PrimengModule {
