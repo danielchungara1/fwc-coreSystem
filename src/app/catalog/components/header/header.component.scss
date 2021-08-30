@@ -11,20 +11,13 @@
   padding: 0 20px;
   margin-top: 10px;
 }
+
 .header-container > p {
   width: 100%;
   text-align: center;
 }
 
-.header-container ::ng-deep .p-button-icon {
-  font-size:1.5em;
-}
-
-.header-container ::ng-deep .header-icon {
-  font-size:0.9em;
-  color: $color-black;
-}
-
-.margin-lateral-md {
-  margin: 0 10px
+.header-logo {
+  margin: 0 10px;
+  width: 150px;
 }

@@ -11,7 +11,7 @@
     </div>
     <div class="card-content">
         <img [src]="product.images | imageSrcPipe" alt="image" class="product-image">
-        <div class="product-description">{{product.description}}</div>
+        <div class="product-description">{{ product.description?.length > 60 ? (product.description | slice:0:60) + '...' : product.description }}  </div>
     </div>
     <div class="card-bottom">
         <span class="product-price">${{product.price}}</span>

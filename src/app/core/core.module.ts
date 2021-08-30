@@ -18,6 +18,7 @@ import {BtnEditComponent} from './components/btn-edit/btn-edit.component';
 import {NotificationComponent} from '@core/components/notification/notification.component';
 import {ToastModule} from 'primeng/toast';
 import { ProgressSpinnerComponent } from './components/progress-spinner/progress-spinner.component';
+import { MenuToggleComponent } from './components/menu-toggle/menu-toggle.component';
 
 @NgModule({
     imports: [
@@ -53,7 +54,8 @@ import { ProgressSpinnerComponent } from './components/progress-spinner/progress
         BtnDeleteComponent,
         BtnEditComponent,
         NotificationComponent,
-        ProgressSpinnerComponent
+        ProgressSpinnerComponent,
+        MenuToggleComponent
     ],
     exports: [
         // Modules
@@ -73,7 +75,8 @@ import { ProgressSpinnerComponent } from './components/progress-spinner/progress
         BtnDeleteComponent,
         BtnEditComponent,
         NotificationComponent,
-        ProgressSpinnerComponent
+        ProgressSpinnerComponent,
+        MenuToggleComponent
     ]
 })
 export class CoreModule {

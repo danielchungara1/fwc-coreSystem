@@ -7,6 +7,7 @@ import {ResultSearch} from '@core/interfaces/result-search';
 import {ResponseDto} from '@core/interfaces/response-dto';
 import {ResponseSimpleDto} from '@core/interfaces/response-simple-dto';
 import {Page} from '@core/interfaces/page';
+import {Order} from '@core/interfaces/order/order';
 
 export abstract class CrudService<T> {
 
@@ -53,8 +54,18 @@ export abstract class CrudService<T> {
             );
     }
 
-    public searchAndEmit(text: string, pageNumber: number, pageSize: number = this.PAGE_SIZE ): void {
-        this.httpService.get<ResponseDto<Page<T>>>(this.crudEndpoints.BASE + '/page' + `?text=${text}&page=${pageNumber}&size=${pageSize}`)
+    public searchAndEmit(text: string,
+                         pageNumber: number,
+                         pageSize: number = this.PAGE_SIZE,
+                         order?: Order): void {
+
+        let endpoint: string = this.crudEndpoints.BASE + '/page' + `?text=${text}&page=${pageNumber}&size=${pageSize}`;
+
+        if (order && order.field && order.direction) {
+            endpoint = endpoint + `&sort=${order.field},${order.direction}`;
+        }
+
+        this.httpService.get<ResponseDto<Page<T>>>(endpoint)
             .subscribe((res: ResponseDto<Page<T>>) => {
                 const resultSearch: ResultSearch<T> =
                     {
