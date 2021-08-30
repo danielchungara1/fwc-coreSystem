@@ -1,3 +1,5 @@
+<div *ngIf="searchText" class="search-text">"{{searchText}}"</div>
+
 <p-dataView
         *ngIf="products"
         [value]="products"
@@ -17,3 +19,8 @@
         [show]="!products"
 >
 </app-progress-spinner>
+
+<app-paginator
+        [crudService]="productService"
+>
+</app-paginator>
