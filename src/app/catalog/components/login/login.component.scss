@@ -1,4 +1,25 @@
-:host ::ng-deep .p-button{
-  width: 100%;
-  margin: 3px 0;
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  line-height: 2em;
+  font-size:0.85em;
+
+}
+.link:hover{
+  text-decoration: underline;
+}
+
+.link-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 1.25em;
+}
+
+.login-container {
+  padding: 5px;
 }
