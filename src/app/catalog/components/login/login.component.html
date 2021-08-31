@@ -1,71 +1,86 @@
-<form [formGroup]="loginForm" (ngSubmit)="login()">
+<div class="login-container">
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
 
-    <div class="form-inputs">
-        <div class="form-group">
-            <label for="username">Username</label>
-            <input
-                    id="username"
-                    type="text"
-                    pInputText
-                    formControlName="username"
-                    class="w-100"
-            />
-            <div *ngIf="getFormControls.username.touched && getFormControls.username.invalid" class="text-danger">
-                <div *ngIf="getFormControls.username.errors.required">Username is required.</div>
+        <div class="form-inputs">
+
+            <!--Username-->
+            <div class="form-group">
+                <mat-form-field class="w-100" appearance="fill">
+                    <mat-label>Username</mat-label>
+                    <input
+                            matInput
+                            type="text"
+                            formControlName="username"
+                    />
+                    <div *ngIf="getFormControls.username.touched && getFormControls.username.invalid"
+                         class="text-danger">
+                        <div *ngIf="getFormControls.username.errors.required">Username is required.</div>
+                    </div>
+                </mat-form-field>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="password1">Password</label>
-            <p-password
-                    id="password1"
-                    formControlName="password"
-                    [toggleMask]="true"
-                    [inputStyle]="{'width':'100%'}"
-                    [style]="{'width':'100%'}"
-                    [feedback]=false
-            ></p-password>
-            <div *ngIf="getFormControls.password.touched && getFormControls.password.invalid" class="text-danger">
-                <div *ngIf="getFormControls.password.errors.required">Password is required.</div>
+
+            <!--Password-->
+            <div class="form-group">
+                <mat-form-field class="w-100" appearance="fill">
+                    <mat-label>Password</mat-label>
+                    <input
+                            matInput
+                            type="password"
+                            formControlName="password"
+                    />
+                    <div *ngIf="getFormControls.password.touched && getFormControls.password.invalid"
+                         class="text-danger">
+                        <div *ngIf="getFormControls.password.errors.required">Password is required.</div>
+                    </div>
+                </mat-form-field>
             </div>
+
         </div>
+
+        <div class="form-actions">
+
+            <app-btn-submit
+                    label="Login"
+                    [form]=loginForm
+                    [submitting]=submitting
+            ></app-btn-submit>
+
+        </div>
+
+    </form>
+
+    <div class="link-container">
+        <a
+                class="link"
+        >
+            Password forgotten?
+        </a>
+        <a
+                class="link"
+        >
+            Sing Up
+        </a>
     </div>
 
-    <div class="form-actions">
-
-        <app-btn-submit
-                label="Login"
-                [form]=loginForm
-                [submitting]=submitting
-        ></app-btn-submit>
+    <div class="centered-container-h">
+        <button
+                pButton
+                pRipple
+                type="button"
+                icon="fab fa-google"
+                label="Google"
+                class="p-button-link"
+        >
+        </button>
+        <button
+                pButton
+                pRipple
+                type="button"
+                icon="fab fa-facebook"
+                label="Facebook"
+                class="p-button-link"
+        >
+        </button>
 
     </div>
-
-</form>
-
-<!--<div class="link-container">-->
-<!--    <a-->
-<!--            class="link"-->
-<!--            routerLink="/security/reset-password"-->
-<!--    >-->
-<!--        Password forgotten?-->
-<!--    </a>-->
-<!--    <a-->
-<!--            class="link"-->
-<!--            routerLink="/security/sign-up"-->
-<!--    >-->
-<!--        Sing Up-->
-<!--    </a>-->
-<!--</div>-->
-
-<p-button
-        label="Register"
-        class="register"
-></p-button>
-<p-button
-        label="Login w/Google"
-        class="login-google"
-></p-button>
-<p-button
-        label="Login w/Facebook"
-        class="login-facebook"
-></p-button>
+</div>

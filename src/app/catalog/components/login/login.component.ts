@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AbstractControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {NotificationService} from '@shared/notification.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   submitting = false;
 
-  constructor(public formBuilder: FormBuilder) { }
+  constructor(public formBuilder: FormBuilder, public notificationService: NotificationService) { }
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -36,7 +37,10 @@ export class LoginComponent implements OnInit {
     //         }
     //     );
     setTimeout(
-        () => this.submitting = false,
+        () => {
+          this.submitting = false;
+          // this.notificationService.showSuccess('Login success.');
+        },
         2000
     );
   }

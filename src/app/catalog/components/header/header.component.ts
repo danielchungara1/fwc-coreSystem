@@ -34,7 +34,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   show(): void{
     this.ref = this.dialogService.open(LoginComponent, {
       header: 'Login',
-      contentStyle: {'max-height': '500px', overflow: 'auto'},
+      contentStyle: {'max-height': '500px', 'min-width': '420px', overflow: 'auto'},
       baseZIndex: 10000
     });
 

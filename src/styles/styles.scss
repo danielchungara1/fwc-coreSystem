@@ -37,3 +37,10 @@ body {
 .text-bold {
   font-weight: 600;
 }
+
+.centered-container-h {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
